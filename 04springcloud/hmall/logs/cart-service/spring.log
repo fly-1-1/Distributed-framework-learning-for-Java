@@ -20,3 +20,117 @@
 02:29:30:808 DEBUG 31420 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
 02:29:30:836 DEBUG 31420 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
 02:29:30:875 DEBUG 31420 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+02:43:56:429  INFO 31420 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+02:43:56:454  INFO 31420 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+02:44:05:559  INFO 11020 --- [main] com.hmall.cart.CartApplication           : Starting CartApplication using Java 11.0.21 on DESKTOP-MVVTE8A with PID 11020 (C:\Users\qjy\Desktop\WorkSpace\Distributed-framework-learning-for-Java\04springcloud\hmall\cart-service\target\classes started by qjy in C:\Users\qjy\Desktop\WorkSpace\Distributed-framework-learning-for-Java\04springcloud\hmall)
+02:44:05:563 DEBUG 11020 --- [main] com.hmall.cart.CartApplication           : Running with Spring Boot v2.7.12, Spring v5.3.27
+02:44:05:563  INFO 11020 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
+02:44:07:430  INFO 11020 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+02:44:07:453  INFO 11020 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+02:44:07:453  INFO 11020 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+02:44:07:582  INFO 11020 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+02:44:07:583  INFO 11020 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1953 ms
+02:44:08:901  INFO 11020 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+02:44:09:001  INFO 11020 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+02:44:09:002  INFO 11020 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+02:44:09:005  INFO 11020 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+02:44:09:037  INFO 11020 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+02:44:09:068  INFO 11020 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+02:44:09:069  INFO 11020 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+02:44:09:071  INFO 11020 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+02:44:09:196  INFO 11020 --- [main] com.hmall.cart.CartApplication           : Started CartApplication in 4.402 seconds (JVM running for 5.594)
+02:44:09:213  INFO 11020 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+02:44:09:553  INFO 11020 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+02:44:09:559 DEBUG 11020 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+02:44:09:580 DEBUG 11020 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+02:44:09:606 DEBUG 11020 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+02:44:17:520 DEBUG 11020 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+02:44:17:520 DEBUG 11020 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+02:44:17:522 DEBUG 11020 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+02:44:18:565 DEBUG 11020 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+02:44:18:565 DEBUG 11020 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+02:44:18:568 DEBUG 11020 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+02:44:58:008  INFO 11020 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+02:44:58:020  INFO 11020 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+02:45:00:619  INFO 15632 --- [main] com.hmall.cart.CartApplication           : Starting CartApplication using Java 11.0.21 on DESKTOP-MVVTE8A with PID 15632 (C:\Users\qjy\Desktop\WorkSpace\Distributed-framework-learning-for-Java\04springcloud\hmall\cart-service\target\classes started by qjy in C:\Users\qjy\Desktop\WorkSpace\Distributed-framework-learning-for-Java\04springcloud\hmall)
+02:45:00:621 DEBUG 15632 --- [main] com.hmall.cart.CartApplication           : Running with Spring Boot v2.7.12, Spring v5.3.27
+02:45:00:622  INFO 15632 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
+02:45:01:847  INFO 15632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+02:45:01:865  INFO 15632 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+02:45:01:865  INFO 15632 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+02:45:01:963  INFO 15632 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+02:45:01:964  INFO 15632 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1288 ms
+02:45:03:083  INFO 15632 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+02:45:03:175  INFO 15632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+02:45:03:177  INFO 15632 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+02:45:03:180  INFO 15632 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+02:45:03:210  INFO 15632 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+02:45:03:334  INFO 15632 --- [main] com.hmall.cart.CartApplication           : Started CartApplication in 3.271 seconds (JVM running for 4.265)
+02:45:15:395  INFO 15632 --- [http-nio-8082-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+02:45:15:396  INFO 15632 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+02:45:15:397  INFO 15632 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+02:45:21:769  INFO 15632 --- [http-nio-8082-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+02:45:22:050  INFO 15632 --- [http-nio-8082-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+02:45:22:058 DEBUG 15632 --- [http-nio-8082-exec-5] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+02:45:22:077 DEBUG 15632 --- [http-nio-8082-exec-5] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+02:45:22:102 DEBUG 15632 --- [http-nio-8082-exec-5] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+02:46:47:128 DEBUG 15632 --- [http-nio-8082-exec-6] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+02:46:47:128 DEBUG 15632 --- [http-nio-8082-exec-6] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+02:46:47:131 DEBUG 15632 --- [http-nio-8082-exec-6] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+02:46:48:029 DEBUG 15632 --- [http-nio-8082-exec-10] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+02:46:48:030 DEBUG 15632 --- [http-nio-8082-exec-10] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+02:46:48:032 DEBUG 15632 --- [http-nio-8082-exec-10] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+02:46:48:649 DEBUG 15632 --- [http-nio-8082-exec-9] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+02:46:48:649 DEBUG 15632 --- [http-nio-8082-exec-9] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+02:46:48:652 DEBUG 15632 --- [http-nio-8082-exec-9] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+02:46:49:507 DEBUG 15632 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+02:46:49:508 DEBUG 15632 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+02:46:49:511 DEBUG 15632 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+02:46:50:059 DEBUG 15632 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+02:46:50:060 DEBUG 15632 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+02:46:50:065 DEBUG 15632 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+02:46:53:259 DEBUG 15632 --- [http-nio-8082-exec-4] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+02:46:53:259 DEBUG 15632 --- [http-nio-8082-exec-4] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+02:46:53:263 DEBUG 15632 --- [http-nio-8082-exec-4] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+02:46:53:703 DEBUG 15632 --- [http-nio-8082-exec-5] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+02:46:53:704 DEBUG 15632 --- [http-nio-8082-exec-5] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+02:46:53:709 DEBUG 15632 --- [http-nio-8082-exec-5] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+02:46:54:188 DEBUG 15632 --- [http-nio-8082-exec-8] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+02:46:54:188 DEBUG 15632 --- [http-nio-8082-exec-8] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+02:46:54:191 DEBUG 15632 --- [http-nio-8082-exec-8] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+02:46:54:624 DEBUG 15632 --- [http-nio-8082-exec-7] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+02:46:54:625 DEBUG 15632 --- [http-nio-8082-exec-7] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+02:46:54:627 DEBUG 15632 --- [http-nio-8082-exec-7] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+02:46:55:048 DEBUG 15632 --- [http-nio-8082-exec-6] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+02:46:55:048 DEBUG 15632 --- [http-nio-8082-exec-6] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+02:46:55:052 DEBUG 15632 --- [http-nio-8082-exec-6] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+02:48:37:924 DEBUG 15632 --- [http-nio-8082-exec-4] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+02:48:37:924 DEBUG 15632 --- [http-nio-8082-exec-4] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+02:48:37:926 DEBUG 15632 --- [http-nio-8082-exec-4] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+02:53:57:967  INFO 15632 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+02:53:57:991  INFO 15632 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+02:54:04:811  INFO 27136 --- [main] com.hmall.cart.CartApplication           : Starting CartApplication using Java 11.0.21 on DESKTOP-MVVTE8A with PID 27136 (C:\Users\qjy\Desktop\WorkSpace\Distributed-framework-learning-for-Java\04springcloud\hmall\cart-service\target\classes started by qjy in C:\Users\qjy\Desktop\WorkSpace\Distributed-framework-learning-for-Java\04springcloud\hmall)
+02:54:04:815 DEBUG 27136 --- [main] com.hmall.cart.CartApplication           : Running with Spring Boot v2.7.12, Spring v5.3.27
+02:54:04:816  INFO 27136 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
+02:54:06:990  INFO 27136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+02:54:07:028  INFO 27136 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+02:54:07:028  INFO 27136 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+02:54:07:167  INFO 27136 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+02:54:07:167  INFO 27136 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2273 ms
+02:54:08:899  INFO 27136 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+02:54:09:025  INFO 27136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+02:54:09:027  INFO 27136 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+02:54:09:032  INFO 27136 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+02:54:09:071  INFO 27136 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+02:54:09:247  INFO 27136 --- [main] com.hmall.cart.CartApplication           : Started CartApplication in 5.166 seconds (JVM running for 6.399)
+02:54:10:846  INFO 27136 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+02:54:10:846  INFO 27136 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+02:54:10:849  INFO 27136 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+02:54:10:984  INFO 27136 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+02:54:11:441  INFO 27136 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+02:54:11:451 DEBUG 27136 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+02:54:11:480 DEBUG 27136 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+02:54:11:511 DEBUG 27136 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+02:54:13:436 DEBUG 27136 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+02:54:13:437 DEBUG 27136 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+02:54:13:440 DEBUG 27136 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
