@@ -1,0 +1,22 @@
+02:29:05:835  INFO 31420 --- [main] com.hmall.cart.CartApplication           : Starting CartApplication using Java 11.0.21 on DESKTOP-MVVTE8A with PID 31420 (C:\Users\qjy\Desktop\WorkSpace\Distributed-framework-learning-for-Java\04springcloud\hmall\cart-service\target\classes started by qjy in C:\Users\qjy\Desktop\WorkSpace\Distributed-framework-learning-for-Java\04springcloud\hmall)
+02:29:05:842 DEBUG 31420 --- [main] com.hmall.cart.CartApplication           : Running with Spring Boot v2.7.12, Spring v5.3.27
+02:29:05:843  INFO 31420 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
+02:29:07:729  INFO 31420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+02:29:07:746  INFO 31420 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+02:29:07:747  INFO 31420 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+02:29:07:860  INFO 31420 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+02:29:07:860  INFO 31420 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1935 ms
+02:29:09:119  INFO 31420 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+02:29:09:210  INFO 31420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+02:29:09:211  INFO 31420 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+02:29:09:214  INFO 31420 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+02:29:09:243  INFO 31420 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+02:29:09:386  INFO 31420 --- [main] com.hmall.cart.CartApplication           : Started CartApplication in 4.432 seconds (JVM running for 5.936)
+02:29:14:223  INFO 31420 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+02:29:14:224  INFO 31420 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+02:29:14:226  INFO 31420 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+02:29:30:335  INFO 31420 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+02:29:30:799  INFO 31420 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+02:29:30:808 DEBUG 31420 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+02:29:30:836 DEBUG 31420 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+02:29:30:875 DEBUG 31420 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
