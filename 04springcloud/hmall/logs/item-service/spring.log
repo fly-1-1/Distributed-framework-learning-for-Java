@@ -612,3 +612,12 @@ java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 14 millise
 00:06:39:319 DEBUG 1912 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
 00:06:39:358 DEBUG 1912 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
 00:06:39:399 DEBUG 1912 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+00:58:28:920 DEBUG 1912 --- [http-nio-8081-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+00:58:28:947 DEBUG 1912 --- [http-nio-8081-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+00:58:28:979 DEBUG 1912 --- [http-nio-8081-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+00:58:32:404 DEBUG 14400 --- [http-nio-8083-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+00:58:32:428 DEBUG 14400 --- [http-nio-8083-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+00:58:32:451 DEBUG 14400 --- [http-nio-8083-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+00:58:33:829 DEBUG 1912 --- [http-nio-8081-exec-6] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+00:58:33:830 DEBUG 1912 --- [http-nio-8081-exec-6] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+00:58:33:834 DEBUG 1912 --- [http-nio-8081-exec-6] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
