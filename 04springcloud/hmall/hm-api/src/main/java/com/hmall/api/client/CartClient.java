@@ -10,5 +10,5 @@ import java.util.Collection;
 public interface CartClient {
 
     @DeleteMapping("/carts")
-    public void deleteCartItemByIds(@RequestParam("ids") Collection<Long> ids);
+    void deleteCartItemByIds(@RequestParam("ids") Collection<Long> ids);
 }
