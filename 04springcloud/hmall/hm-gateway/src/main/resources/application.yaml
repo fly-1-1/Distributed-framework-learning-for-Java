@@ -12,17 +12,27 @@ spring:
           uri: lb://item-service
           predicates:
             - Path=/items/**,/search/**
+
         - id: user-service
           uri: lb://user-service
           predicates:
             - Path=/addresses/**,/users/**
-        - id: trade
-          uri: lb://trade-service
+
+        - id: cart-service
+          uri: lb://cart-service
           predicates:
-              - Path=/orders/**
-        - id: pay
-          uri: lb://pay-service
-          predicates:
-            - Path=/pay-orders/**
+            - Path=/carts/**
       default-filters:
-          - AddRequestHeader=truth,anyone long-press like button will be rich
+        - AddRequestHeader=truth,anyone long-press like button will be rich
+hm:
+  jwt:
+    location: classpath:hmall.jks
+    alias: hmall
+    password: hmall123
+    tokenTTL: 30m
+  auth:
+    excludePaths:
+      - /search/**
+      - /users/login
+      - /items/**
+      - /hi
