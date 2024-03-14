@@ -25,7 +25,7 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
 
     private final JwtTool jwtTool;
 
-    private final AntPathMatcher antPathMatcher =new AntPathMatcher();
+    private final AntPathMatcher antPathMatcher = new AntPathMatcher();
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
@@ -41,10 +41,10 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
         List<String> headers = request.getHeaders().get("authorization");
         String token = null;
         if (headers != null && !headers.isEmpty()) {
-            token=headers.get(0);
+            token = headers.get(0);
         }
         //4.校验并且解析token
-        Long userId =null;
+        Long userId = null;
         try {
             userId = jwtTool.parseToken(token);
         } catch (UnauthorizedException e) {
@@ -54,15 +54,18 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
             return response.setComplete();
         }
 
-        //TODO 5.传递用户信息
-        System.out.println("userId:"+userId);
+        //5.传递用户信息
+        String userInfo = userId.toString();
+        ServerWebExchange swe = exchange.mutate()
+                .request(builder -> builder.header("user-info", userInfo))
+                .build();
         //6.放行
-        return chain.filter(exchange);
+        return chain.filter(swe);
     }
 
     private boolean isExclude(String path) {
         for (String pathPattern : authProperties.getExcludePaths()) {
-            if(antPathMatcher.match(pathPattern,path)){
+            if (antPathMatcher.match(pathPattern, path)) {
                 return true;
             }
         }
