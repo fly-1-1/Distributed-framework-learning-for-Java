@@ -16,7 +16,6 @@ public class UserInfoInterceptor implements HandlerInterceptor {
         if(StrUtil.isNotBlank(userInfo)){
             UserContext.setUser(Long.valueOf(userInfo));
         }
-
         //放行
         return true;
     }
