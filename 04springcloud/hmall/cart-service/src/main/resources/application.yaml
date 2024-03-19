@@ -3,11 +3,14 @@ server:
 feign:
   okhttp:
     enabled: true
+  sentinel:
+    enabled: true #开启feign sentinel整合
+
 hm:
   db:
     database: hm-cart
   swagger:
-    title: "黑马商城购物车服务接口文档"
+    title: "商城购物车服务接口文档"
     package: com.hmall.cart.controller
 spring:
   cloud:
