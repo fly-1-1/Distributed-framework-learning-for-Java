@@ -8,6 +8,7 @@ import com.hmall.common.utils.BeanUtils;
 import com.hmall.item.domain.po.Item;
 import com.hmall.item.mapper.ItemMapper;
 import com.hmall.item.service.IItemService;
+import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -24,6 +25,7 @@ import java.util.List;
 public class ItemServiceImpl extends ServiceImpl<ItemMapper, Item> implements IItemService {
 
     @Override
+    @GlobalTransactional
     public void deductStock(List<OrderDetailDTO> items) {
         String sqlStatement = "com.hmall.item.mapper.ItemMapper.updateStock";
         boolean r = false;
@@ -31,7 +33,7 @@ public class ItemServiceImpl extends ServiceImpl<ItemMapper, Item> implements II
             r = executeBatch(items, (sqlSession, entity) -> sqlSession.update(sqlStatement, entity));
         } catch (Exception e) {
             log.error("更新库存异常", e);
-            return;
+            throw new BizIllegalException("库存不足！");
         }
         if (!r) {
             throw new BizIllegalException("库存不足！");
