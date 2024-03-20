@@ -2228,3 +2228,861 @@ java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 1 millisec
 02:08:23:249 DEBUG 13180 --- [http-nio-8083-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? )
 02:08:23:250 DEBUG 13180 --- [http-nio-8083-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 1861102(Long), 100000006163(Long), 14741770661(Long)
 02:08:23:253 DEBUG 13180 --- [http-nio-8083-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 3
+02:48:59:243  WARN 13180 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+02:48:59:246  WARN 13180 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+02:48:59:253  WARN 13180 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+02:48:59:259  WARN 13180 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+02:48:59:284  WARN 33864 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+02:48:59:287  WARN 33864 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+02:48:59:295  WARN 33864 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+02:48:59:300  WARN 33864 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+02:48:59:757  INFO 13180 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+02:48:59:765  INFO 13180 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+02:48:59:808  INFO 33864 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+02:48:59:817  INFO 33864 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+02:49:00:075  INFO 13180 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+02:49:00:076  INFO 13180 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@188abd07[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+02:49:00:076  INFO 13180 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1710870544101_192.168.157.1_5926
+02:49:00:080  INFO 13180 --- [nacos-grpc-client-executor-768] c.a.n.c.remote.client.grpc.GrpcClient    : [1710870544101_192.168.157.1_5926]Ignore complete event,isRunning:false,isAbandon=false
+02:49:00:087  INFO 13180 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@5b7716a9[Running, pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 769]
+02:49:00:099  INFO 13180 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+02:49:00:123  INFO 13180 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+02:49:00:129  INFO 33864 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+02:49:00:129  INFO 33864 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@483f1069[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+02:49:00:129  INFO 33864 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1710870531277_192.168.157.1_5617
+02:49:00:134  INFO 33864 --- [nacos-grpc-client-executor-773] c.a.n.c.remote.client.grpc.GrpcClient    : [1710870531277_192.168.157.1_5617]Ignore complete event,isRunning:false,isAbandon=false
+02:49:00:142  INFO 33864 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@5f2a291a[Running, pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 774]
+02:49:00:157  INFO 33864 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+02:49:00:193  INFO 33864 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+16:29:52:910  INFO 15432 --- [main] com.hmall.item.ItemApplication           : Starting ItemApplication using Java 11.0.21 on DESKTOP-MVVTE8A with PID 15432 (C:\Users\qjy\Desktop\WorkSpace\Distributed-framework-learning-for-Java\04springcloud\hmall\item-service\target\classes started by qjy in C:\Users\qjy\Desktop\WorkSpace\Distributed-framework-learning-for-Java\04springcloud\hmall)
+16:29:52:918 DEBUG 15432 --- [main] com.hmall.item.ItemApplication           : Running with Spring Boot v2.7.12, Spring v5.3.27
+16:29:52:919  INFO 15432 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+16:29:55:648  INFO 15432 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0896a3c4-a260-3a14-abf3-a375d422cddf
+16:29:56:457  INFO 18756 --- [main] com.hmall.item.ItemApplication           : Starting ItemApplication using Java 11.0.21 on DESKTOP-MVVTE8A with PID 18756 (C:\Users\qjy\Desktop\WorkSpace\Distributed-framework-learning-for-Java\04springcloud\hmall\item-service\target\classes started by qjy in C:\Users\qjy\Desktop\WorkSpace\Distributed-framework-learning-for-Java\04springcloud\hmall)
+16:29:56:462 DEBUG 18756 --- [main] com.hmall.item.ItemApplication           : Running with Spring Boot v2.7.12, Spring v5.3.27
+16:29:56:463  INFO 18756 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+16:29:56:767  INFO 15432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+16:29:56:794  INFO 15432 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+16:29:56:794  INFO 15432 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+16:29:57:152  INFO 15432 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+16:29:57:155  INFO 15432 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4079 ms
+16:29:59:348  INFO 18756 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0896a3c4-a260-3a14-abf3-a375d422cddf
+16:30:00:317  INFO 18756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+16:30:00:346  INFO 18756 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+16:30:00:347  INFO 18756 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+16:30:00:633  INFO 18756 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+16:30:00:634  INFO 18756 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4073 ms
+16:30:01:790  INFO 15432 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+16:30:01:872  INFO 15432 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+16:30:03:486  INFO 15432 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+16:30:04:092  INFO 15432 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 2b892def-8f51-47ac-9f28-3f253383d6a4
+16:30:04:206  INFO 15432 --- [main] org.reflections.Reflections              : Reflections took 55 ms to scan 1 urls, producing 3 keys and 6 values 
+16:30:04:276  INFO 15432 --- [main] org.reflections.Reflections              : Reflections took 20 ms to scan 1 urls, producing 4 keys and 9 values 
+16:30:04:292  INFO 15432 --- [main] org.reflections.Reflections              : Reflections took 10 ms to scan 1 urls, producing 3 keys and 10 values 
+16:30:04:304  WARN 15432 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+16:30:04:319  INFO 15432 --- [main] org.reflections.Reflections              : Reflections took 13 ms to scan 1 urls, producing 1 keys and 5 values 
+16:30:04:340  INFO 15432 --- [main] org.reflections.Reflections              : Reflections took 15 ms to scan 1 urls, producing 1 keys and 7 values 
+16:30:04:358  INFO 15432 --- [main] org.reflections.Reflections              : Reflections took 12 ms to scan 1 urls, producing 2 keys and 8 values 
+16:30:04:395  WARN 15432 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+16:30:04:408  INFO 15432 --- [main] com.alibaba.nacos.common.remote.client   : [2b892def-8f51-47ac-9f28-3f253383d6a4] RpcClient init label, labels = {module=naming, source=sdk}
+16:30:04:420  INFO 15432 --- [main] com.alibaba.nacos.common.remote.client   : [2b892def-8f51-47ac-9f28-3f253383d6a4] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+16:30:04:422  INFO 15432 --- [main] com.alibaba.nacos.common.remote.client   : [2b892def-8f51-47ac-9f28-3f253383d6a4] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+16:30:04:426  INFO 15432 --- [main] com.alibaba.nacos.common.remote.client   : [2b892def-8f51-47ac-9f28-3f253383d6a4] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+16:30:04:432  INFO 15432 --- [main] com.alibaba.nacos.common.remote.client   : [2b892def-8f51-47ac-9f28-3f253383d6a4] Try to connect to server on start up, server: {serverIp = '192.168.157.128', server main port = 8848}
+16:30:05:174  INFO 18756 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+16:30:05:237  INFO 18756 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+16:30:06:711  INFO 18756 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+16:30:07:378  INFO 15432 --- [main] com.alibaba.nacos.common.remote.client   : [2b892def-8f51-47ac-9f28-3f253383d6a4] Success to connect to server [192.168.157.128:8848] on start up, connectionId = 1710923408382_192.168.157.1_4976
+16:30:07:381  INFO 15432 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [2b892def-8f51-47ac-9f28-3f253383d6a4] Notify connected event to listeners.
+16:30:07:383  INFO 15432 --- [main] com.alibaba.nacos.common.remote.client   : [2b892def-8f51-47ac-9f28-3f253383d6a4] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+16:30:07:386  INFO 15432 --- [main] com.alibaba.nacos.common.remote.client   : [2b892def-8f51-47ac-9f28-3f253383d6a4] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$938/0x0000000800717440
+16:30:07:403  INFO 18756 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 1c8a6ed4-1aa0-4b43-9252-d020d89c0f76
+16:30:07:552  INFO 18756 --- [main] org.reflections.Reflections              : Reflections took 82 ms to scan 1 urls, producing 3 keys and 6 values 
+16:30:07:620  INFO 18756 --- [main] org.reflections.Reflections              : Reflections took 20 ms to scan 1 urls, producing 4 keys and 9 values 
+16:30:07:640  INFO 18756 --- [main] org.reflections.Reflections              : Reflections took 13 ms to scan 1 urls, producing 3 keys and 10 values 
+16:30:07:649  WARN 18756 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+16:30:07:663  INFO 18756 --- [main] org.reflections.Reflections              : Reflections took 13 ms to scan 1 urls, producing 1 keys and 5 values 
+16:30:07:682  INFO 18756 --- [main] org.reflections.Reflections              : Reflections took 12 ms to scan 1 urls, producing 1 keys and 7 values 
+16:30:07:706  INFO 18756 --- [main] org.reflections.Reflections              : Reflections took 14 ms to scan 1 urls, producing 2 keys and 8 values 
+16:30:07:715  WARN 18756 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+16:30:07:717  INFO 18756 --- [main] com.alibaba.nacos.common.remote.client   : [1c8a6ed4-1aa0-4b43-9252-d020d89c0f76] RpcClient init label, labels = {module=naming, source=sdk}
+16:30:07:721  INFO 18756 --- [main] com.alibaba.nacos.common.remote.client   : [1c8a6ed4-1aa0-4b43-9252-d020d89c0f76] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+16:30:07:722  INFO 18756 --- [main] com.alibaba.nacos.common.remote.client   : [1c8a6ed4-1aa0-4b43-9252-d020d89c0f76] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+16:30:07:723  INFO 18756 --- [main] com.alibaba.nacos.common.remote.client   : [1c8a6ed4-1aa0-4b43-9252-d020d89c0f76] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+16:30:07:727  INFO 18756 --- [main] com.alibaba.nacos.common.remote.client   : [1c8a6ed4-1aa0-4b43-9252-d020d89c0f76] Try to connect to server on start up, server: {serverIp = '192.168.157.128', server main port = 8848}
+16:30:08:036  INFO 15432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+16:30:08:090  INFO 15432 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.157.1:8081 register finished
+16:30:08:730  INFO 15432 --- [nacos-grpc-client-executor-13] com.alibaba.nacos.common.remote.client   : [2b892def-8f51-47ac-9f28-3f253383d6a4] Receive server push request, request = NotifySubscriberRequest, requestId = 1
+16:30:08:745  INFO 15432 --- [nacos-grpc-client-executor-13] com.alibaba.nacos.common.remote.client   : [2b892def-8f51-47ac-9f28-3f253383d6a4] Ack server push request, request = NotifySubscriberRequest, requestId = 1
+16:30:09:723  INFO 15432 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+16:30:09:751  INFO 15432 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+16:30:09:757  INFO 15432 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+16:30:09:826  INFO 15432 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+16:30:10:389  INFO 15432 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 20.339 seconds (JVM running for 21.799)
+16:30:12:342  INFO 18756 --- [main] com.alibaba.nacos.common.remote.client   : [1c8a6ed4-1aa0-4b43-9252-d020d89c0f76] Success to connect to server [192.168.157.128:8848] on start up, connectionId = 1710923413336_192.168.157.1_5106
+16:30:12:346  INFO 18756 --- [main] com.alibaba.nacos.common.remote.client   : [1c8a6ed4-1aa0-4b43-9252-d020d89c0f76] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+16:30:12:345  INFO 18756 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [1c8a6ed4-1aa0-4b43-9252-d020d89c0f76] Notify connected event to listeners.
+16:30:12:348  INFO 18756 --- [main] com.alibaba.nacos.common.remote.client   : [1c8a6ed4-1aa0-4b43-9252-d020d89c0f76] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$938/0x0000000800717440
+16:30:12:524  INFO 18756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+16:30:12:563  INFO 18756 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.157.1:8083 register finished
+16:30:12:942  INFO 15432 --- [nacos-grpc-client-executor-14] com.alibaba.nacos.common.remote.client   : [2b892def-8f51-47ac-9f28-3f253383d6a4] Receive server push request, request = NotifySubscriberRequest, requestId = 3
+16:30:12:972  INFO 15432 --- [nacos-grpc-client-executor-14] com.alibaba.nacos.common.remote.client   : [2b892def-8f51-47ac-9f28-3f253383d6a4] Ack server push request, request = NotifySubscriberRequest, requestId = 3
+16:30:13:010  INFO 18756 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [1c8a6ed4-1aa0-4b43-9252-d020d89c0f76] Receive server push request, request = NotifySubscriberRequest, requestId = 4
+16:30:13:025  INFO 18756 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [1c8a6ed4-1aa0-4b43-9252-d020d89c0f76] Ack server push request, request = NotifySubscriberRequest, requestId = 4
+16:30:14:033  INFO 18756 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+16:30:14:034  INFO 18756 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+16:30:14:041  INFO 18756 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+16:30:14:123  INFO 18756 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+16:30:14:488  INFO 18756 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 20.616 seconds (JVM running for 22.367)
+17:42:53:037  WARN 15432 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+17:42:53:037  WARN 15432 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+17:42:53:049  WARN 15432 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+17:42:53:055  WARN 15432 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+17:42:53:083  WARN 18756 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+17:42:53:085  WARN 18756 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+17:42:53:104  WARN 18756 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+17:42:53:110  WARN 18756 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+17:42:53:792  INFO 15432 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+17:42:53:804  INFO 15432 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+17:42:53:915  INFO 18756 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+17:42:53:928  INFO 18756 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+17:42:54:124  INFO 15432 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+17:42:54:125  INFO 15432 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@ea80913[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+17:42:54:126  INFO 15432 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1710923408382_192.168.157.1_4976
+17:42:54:134  INFO 15432 --- [nacos-grpc-client-executor-937] c.a.n.c.remote.client.grpc.GrpcClient    : [1710923408382_192.168.157.1_4976]Ignore complete event,isRunning:false,isAbandon=false
+17:42:54:154  INFO 15432 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@7d5bbccb[Running, pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 938]
+17:42:54:246  INFO 18756 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+17:42:54:248  INFO 18756 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@358e867b[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+17:42:54:248  INFO 18756 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1710923413336_192.168.157.1_5106
+17:42:54:252  INFO 18756 --- [nacos-grpc-client-executor-925] c.a.n.c.remote.client.grpc.GrpcClient    : [1710923413336_192.168.157.1_5106]Ignore complete event,isRunning:false,isAbandon=false
+17:42:54:270  INFO 18756 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@5c598a32[Running, pool size = 6, active threads = 0, queued tasks = 0, completed tasks = 926]
+17:43:34:724  INFO 36152 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+17:43:37:206  INFO 36152 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=db486471-7768-3d14-97b0-02e93d25a996
+17:43:37:354  INFO 36152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:37:355  INFO 36152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:37:356  INFO 36152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:37:436  INFO 36152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:37:441  INFO 36152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:37:444  INFO 36152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:37:446  INFO 36152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$563/0x0000000800639440] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:37:448  INFO 36152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:37:455  INFO 36152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:37:459  INFO 36152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:37:466  INFO 36152 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
+17:43:37:597  INFO 36152 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+17:43:37:606  INFO 36152 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+17:43:37:744  INFO 36152 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
+17:43:37:897  INFO 36152 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+17:43:37:934 ERROR 36152 --- [main] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:43:37:934  INFO 36152 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[item-service] txServiceGroup[default_tx_group]
+17:43:37:953  INFO 36152 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
+17:43:37:954  INFO 36152 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
+17:43:37:974  INFO 36152 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+17:43:37:974  INFO 36152 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[item-service] txServiceGroup[default_tx_group]
+17:43:37:974  INFO 36152 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
+17:43:37:978  INFO 36152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:38:145  INFO 36152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:38:151  INFO 36152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:38:655  INFO 36152 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+17:43:38:679  INFO 36152 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:43:38:679  INFO 36152 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+17:43:39:015  INFO 36152 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+17:43:39:016  INFO 36152 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4255 ms
+17:43:39:558  INFO 36152 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+17:43:40:294  INFO 36152 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+17:43:40:406 ERROR 36152 --- [main] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:43:40:408  INFO 35148 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+17:43:42:956  INFO 35148 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=db486471-7768-3d14-97b0-02e93d25a996
+17:43:43:095  INFO 35148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:43:095  INFO 35148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:43:096  INFO 35148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:43:180  INFO 35148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:43:189  INFO 35148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:43:192  INFO 35148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:43:194  INFO 35148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$563/0x0000000800638840] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:43:195  INFO 35148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:43:204  INFO 35148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:43:210  INFO 35148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:43:217  INFO 35148 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
+17:43:43:355  INFO 35148 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+17:43:43:365  INFO 35148 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+17:43:43:516  INFO 35148 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
+17:43:43:690  INFO 35148 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+17:43:43:738 ERROR 35148 --- [main] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:43:43:738  INFO 35148 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[item-service] txServiceGroup[default_tx_group]
+17:43:43:758  INFO 35148 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
+17:43:43:759  INFO 35148 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
+17:43:43:778  INFO 35148 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+17:43:43:778  INFO 35148 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[item-service] txServiceGroup[default_tx_group]
+17:43:43:778  INFO 35148 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
+17:43:43:782  INFO 35148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:43:948  INFO 35148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:43:954  INFO 35148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:44:438  INFO 36152 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+17:43:44:504  INFO 35148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+17:43:44:530  INFO 35148 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:43:44:530  INFO 35148 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+17:43:44:548  INFO 36152 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+17:43:44:840  INFO 35148 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+17:43:44:841  INFO 35148 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4400 ms
+17:43:45:320  INFO 35148 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+17:43:46:018  INFO 35148 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+17:43:46:098  INFO 36152 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+17:43:46:143 ERROR 35148 --- [main] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:43:46:550  INFO 36152 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of cd072e9b-9a46-4b52-ae3b-c7a65e0ebe09
+17:43:46:551  INFO 36152 --- [main] com.alibaba.nacos.common.remote.client   : [cd072e9b-9a46-4b52-ae3b-c7a65e0ebe09] RpcClient init label, labels = {module=naming, source=sdk}
+17:43:46:557  INFO 36152 --- [main] com.alibaba.nacos.common.remote.client   : [cd072e9b-9a46-4b52-ae3b-c7a65e0ebe09] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+17:43:46:557  INFO 36152 --- [main] com.alibaba.nacos.common.remote.client   : [cd072e9b-9a46-4b52-ae3b-c7a65e0ebe09] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+17:43:46:558  INFO 36152 --- [main] com.alibaba.nacos.common.remote.client   : [cd072e9b-9a46-4b52-ae3b-c7a65e0ebe09] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+17:43:46:559  INFO 36152 --- [main] com.alibaba.nacos.common.remote.client   : [cd072e9b-9a46-4b52-ae3b-c7a65e0ebe09] Try to connect to server on start up, server: {serverIp = '192.168.157.128', server main port = 8848}
+17:43:46:694  INFO 36152 --- [main] com.alibaba.nacos.common.remote.client   : [cd072e9b-9a46-4b52-ae3b-c7a65e0ebe09] Success to connect to server [192.168.157.128:8848] on start up, connectionId = 1710927828109_192.168.157.1_12569
+17:43:46:694  INFO 36152 --- [main] com.alibaba.nacos.common.remote.client   : [cd072e9b-9a46-4b52-ae3b-c7a65e0ebe09] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+17:43:46:694  INFO 36152 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [cd072e9b-9a46-4b52-ae3b-c7a65e0ebe09] Notify connected event to listeners.
+17:43:46:695  INFO 36152 --- [main] com.alibaba.nacos.common.remote.client   : [cd072e9b-9a46-4b52-ae3b-c7a65e0ebe09] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$473/0x0000000800423c40
+17:43:46:817  INFO 36152 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+17:43:46:840  INFO 36152 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.157.1:8081 register finished
+17:43:47:351  INFO 36152 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [cd072e9b-9a46-4b52-ae3b-c7a65e0ebe09] Receive server push request, request = NotifySubscriberRequest, requestId = 15
+17:43:47:367  INFO 36152 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [cd072e9b-9a46-4b52-ae3b-c7a65e0ebe09] Ack server push request, request = NotifySubscriberRequest, requestId = 15
+17:43:48:379  INFO 36152 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+17:43:48:381  INFO 36152 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+17:43:48:388  INFO 36152 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+17:43:48:457  INFO 36152 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+17:43:48:751  INFO 36152 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 21.406 seconds (JVM running for 23.1)
+17:43:48:765  INFO 36152 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service.yaml, group=DEFAULT_GROUP
+17:43:48:766  INFO 36152 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service-local.yaml, group=DEFAULT_GROUP
+17:43:48:767  INFO 36152 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service, group=DEFAULT_GROUP
+17:43:50:369  INFO 35148 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+17:43:50:459  INFO 35148 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+17:43:51:878  INFO 35148 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+17:43:52:204  INFO 35148 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of d885230c-902d-45f6-901e-b4183fffa700
+17:43:52:204  INFO 35148 --- [main] com.alibaba.nacos.common.remote.client   : [d885230c-902d-45f6-901e-b4183fffa700] RpcClient init label, labels = {module=naming, source=sdk}
+17:43:52:208  INFO 35148 --- [main] com.alibaba.nacos.common.remote.client   : [d885230c-902d-45f6-901e-b4183fffa700] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+17:43:52:209  INFO 35148 --- [main] com.alibaba.nacos.common.remote.client   : [d885230c-902d-45f6-901e-b4183fffa700] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+17:43:52:210  INFO 35148 --- [main] com.alibaba.nacos.common.remote.client   : [d885230c-902d-45f6-901e-b4183fffa700] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+17:43:52:211  INFO 35148 --- [main] com.alibaba.nacos.common.remote.client   : [d885230c-902d-45f6-901e-b4183fffa700] Try to connect to server on start up, server: {serverIp = '192.168.157.128', server main port = 8848}
+17:43:52:414  INFO 35148 --- [main] com.alibaba.nacos.common.remote.client   : [d885230c-902d-45f6-901e-b4183fffa700] Success to connect to server [192.168.157.128:8848] on start up, connectionId = 1710927833816_192.168.157.1_12696
+17:43:52:416  INFO 35148 --- [main] com.alibaba.nacos.common.remote.client   : [d885230c-902d-45f6-901e-b4183fffa700] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+17:43:52:416  INFO 35148 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [d885230c-902d-45f6-901e-b4183fffa700] Notify connected event to listeners.
+17:43:52:418  INFO 35148 --- [main] com.alibaba.nacos.common.remote.client   : [d885230c-902d-45f6-901e-b4183fffa700] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$473/0x0000000800423040
+17:43:52:565  INFO 35148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+17:43:52:584  INFO 35148 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.157.1:8083 register finished
+17:43:52:997  INFO 36152 --- [nacos-grpc-client-executor-8] com.alibaba.nacos.common.remote.client   : [cd072e9b-9a46-4b52-ae3b-c7a65e0ebe09] Receive server push request, request = NotifySubscriberRequest, requestId = 17
+17:43:53:007  INFO 36152 --- [nacos-grpc-client-executor-8] com.alibaba.nacos.common.remote.client   : [cd072e9b-9a46-4b52-ae3b-c7a65e0ebe09] Ack server push request, request = NotifySubscriberRequest, requestId = 17
+17:43:53:017  INFO 35148 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [d885230c-902d-45f6-901e-b4183fffa700] Receive server push request, request = NotifySubscriberRequest, requestId = 18
+17:43:53:025  INFO 35148 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [d885230c-902d-45f6-901e-b4183fffa700] Ack server push request, request = NotifySubscriberRequest, requestId = 18
+17:43:53:937  INFO 35148 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+17:43:53:938  INFO 35148 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+17:43:53:941  INFO 35148 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+17:43:53:983  INFO 35148 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+17:43:54:132  INFO 35148 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 21.655 seconds (JVM running for 23.239)
+17:43:54:139  INFO 35148 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service.yaml, group=DEFAULT_GROUP
+17:43:54:140  INFO 35148 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service-local.yaml, group=DEFAULT_GROUP
+17:43:54:141  INFO 35148 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service, group=DEFAULT_GROUP
+17:44:37:887 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:44:37:974 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:44:43:680 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:44:43:779 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:44:47:885 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:44:47:975 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:44:53:678 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:44:53:778 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:44:57:887 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:44:57:972 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:03:677 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:03:781 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:07:888 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:07:973 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:13:679 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:13:778 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:17:885 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:17:973 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:23:678 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:23:779 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:27:887 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:27:972 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:33:678 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:33:778 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:37:887 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:37:973 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:43:678 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:43:780 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:47:888 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:47:974 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:53:678 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:53:778 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:57:887 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:45:57:973 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:03:677 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:03:778 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:07:887 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:07:974 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:13:679 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:13:779 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:17:887 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:17:973 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:23:677 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:23:779 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:27:886 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:27:973 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:33:676 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:33:778 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:37:888 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:37:972 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:43:677 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:43:779 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:47:885 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:47:972 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:53:678 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:53:778 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:57:887 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:46:57:975 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:03:680 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:03:781 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:07:887 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:07:974 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:13:679 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:13:778 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:17:886 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:17:975 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:23:678 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:23:777 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:27:887 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:27:975 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:33:676 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:33:780 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:37:885 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:37:975 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:43:677 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:43:780 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:47:887 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:47:974 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:53:680 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:53:782 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:57:887 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:47:57:973 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:03:678 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:03:780 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:07:887 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:07:973 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:13:678 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:13:780 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:17:886 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:17:973 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:23:679 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:23:779 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:27:889 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:27:973 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:33:676 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:33:779 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:37:889 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:37:974 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:43:677 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:43:777 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:47:887 ERROR 36152 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:47:972 ERROR 36152 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:53:676 ERROR 35148 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:53:778 ERROR 35148 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:48:56:550  WARN 36152 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+17:48:56:550  WARN 36152 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+17:48:56:550  WARN 36152 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+17:48:56:551  WARN 36152 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+17:48:56:579  WARN 35148 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+17:48:56:579  WARN 35148 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+17:48:56:579  WARN 35148 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+17:48:56:580  WARN 35148 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+17:48:56:871  INFO 36152 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+17:48:56:879  INFO 36152 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+17:48:56:911  INFO 35148 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+17:48:56:919  INFO 35148 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+17:48:57:188  INFO 36152 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+17:48:57:188  INFO 36152 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@2c557691[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+17:48:57:188  INFO 36152 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1710927828109_192.168.157.1_12569
+17:48:57:198  INFO 36152 --- [SpringContextShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@4db83ae7[Running, pool size = 5, active threads = 1, queued tasks = 0, completed tasks = 78]
+17:48:57:198  INFO 36152 --- [nacos-grpc-client-executor-78] c.a.n.c.remote.client.grpc.GrpcClient    : [1710927828109_192.168.157.1_12569]Ignore complete event,isRunning:false,isAbandon=false
+17:48:57:204  INFO 36152 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+17:48:57:227  INFO 35148 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+17:48:57:228  INFO 35148 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@4e2378ba[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+17:48:57:228  INFO 35148 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1710927833816_192.168.157.1_12696
+17:48:57:231  INFO 35148 --- [nacos-grpc-client-executor-78] c.a.n.c.remote.client.grpc.GrpcClient    : [1710927833816_192.168.157.1_12696]Ignore complete event,isRunning:false,isAbandon=false
+17:48:57:239  INFO 35148 --- [SpringContextShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@6597a64d[Running, pool size = 7, active threads = 0, queued tasks = 0, completed tasks = 79]
+17:48:57:248  INFO 35148 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+17:48:57:273  INFO 36152 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+17:48:57:381  INFO 35148 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+17:49:10:951  INFO 24420 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+17:49:13:235  INFO 24420 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=db486471-7768-3d14-97b0-02e93d25a996
+17:49:13:395  INFO 24420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:13:395  INFO 24420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:13:397  INFO 24420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:13:493  INFO 24420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:13:501  INFO 24420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:13:504  INFO 24420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:13:505  INFO 24420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$563/0x0000000800639440] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:13:507  INFO 24420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:13:514  INFO 24420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:13:519  INFO 24420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:13:526  INFO 24420 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
+17:49:13:653  INFO 24420 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+17:49:13:663  INFO 24420 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+17:49:13:820  INFO 24420 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
+17:49:14:018  INFO 24420 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+17:49:14:072 ERROR 24420 --- [main] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:49:14:072  INFO 24420 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[item-service] txServiceGroup[default_tx_group]
+17:49:14:098  INFO 24420 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
+17:49:14:099  INFO 24420 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
+17:49:14:120  INFO 24420 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+17:49:14:120  INFO 24420 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[item-service] txServiceGroup[default_tx_group]
+17:49:14:121  INFO 24420 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
+17:49:14:126  INFO 24420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:14:300  INFO 24420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:14:304  INFO 24420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:14:747  INFO 24420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+17:49:14:766  INFO 24420 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:49:14:766  INFO 24420 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+17:49:14:999  INFO 24420 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+17:49:14:999  INFO 24420 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4024 ms
+17:49:15:500  INFO 24420 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+17:49:16:250  INFO 24420 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+17:49:16:392 ERROR 24420 --- [main] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:49:20:233  INFO 24420 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+17:49:20:369  INFO 24420 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+17:49:22:186  INFO 24420 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+17:49:22:581  INFO 24420 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of bb7e4852-9ec8-4772-a226-fcf6ac784ce0
+17:49:22:583  INFO 24420 --- [main] com.alibaba.nacos.common.remote.client   : [bb7e4852-9ec8-4772-a226-fcf6ac784ce0] RpcClient init label, labels = {module=naming, source=sdk}
+17:49:22:588  INFO 24420 --- [main] com.alibaba.nacos.common.remote.client   : [bb7e4852-9ec8-4772-a226-fcf6ac784ce0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+17:49:22:588  INFO 24420 --- [main] com.alibaba.nacos.common.remote.client   : [bb7e4852-9ec8-4772-a226-fcf6ac784ce0] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+17:49:22:589  INFO 24420 --- [main] com.alibaba.nacos.common.remote.client   : [bb7e4852-9ec8-4772-a226-fcf6ac784ce0] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+17:49:22:590  INFO 24420 --- [main] com.alibaba.nacos.common.remote.client   : [bb7e4852-9ec8-4772-a226-fcf6ac784ce0] Try to connect to server on start up, server: {serverIp = '192.168.157.128', server main port = 8848}
+17:49:22:734  INFO 24420 --- [main] com.alibaba.nacos.common.remote.client   : [bb7e4852-9ec8-4772-a226-fcf6ac784ce0] Success to connect to server [192.168.157.128:8848] on start up, connectionId = 1710928164154_192.168.157.1_14113
+17:49:22:734  INFO 24420 --- [main] com.alibaba.nacos.common.remote.client   : [bb7e4852-9ec8-4772-a226-fcf6ac784ce0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+17:49:22:734  INFO 24420 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [bb7e4852-9ec8-4772-a226-fcf6ac784ce0] Notify connected event to listeners.
+17:49:22:735  INFO 24420 --- [main] com.alibaba.nacos.common.remote.client   : [bb7e4852-9ec8-4772-a226-fcf6ac784ce0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$473/0x0000000800423c40
+17:49:22:908  INFO 24420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+17:49:22:937  INFO 24420 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.157.1:8081 register finished
+17:49:23:320  INFO 24420 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [bb7e4852-9ec8-4772-a226-fcf6ac784ce0] Receive server push request, request = NotifySubscriberRequest, requestId = 24
+17:49:23:330  INFO 24420 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [bb7e4852-9ec8-4772-a226-fcf6ac784ce0] Ack server push request, request = NotifySubscriberRequest, requestId = 24
+17:49:24:377  INFO 24420 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+17:49:24:378  INFO 24420 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+17:49:24:386  INFO 24420 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+17:49:24:467  INFO 24420 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+17:49:24:835  INFO 24420 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 21.681 seconds (JVM running for 22.947)
+17:49:24:850  INFO 24420 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service.yaml, group=DEFAULT_GROUP
+17:49:24:853  INFO 24420 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service-local.yaml, group=DEFAULT_GROUP
+17:49:24:855  INFO 24420 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service, group=DEFAULT_GROUP
+17:49:26:073  INFO 45196 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+17:49:28:248  INFO 45196 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=db486471-7768-3d14-97b0-02e93d25a996
+17:49:28:322  INFO 45196 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:28:322  INFO 45196 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:28:323  INFO 45196 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:28:364  INFO 45196 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:28:369  INFO 45196 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:28:372  INFO 45196 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:28:372  INFO 45196 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$563/0x0000000800639440] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:28:373  INFO 45196 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:28:376  INFO 45196 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:28:379  INFO 45196 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:28:382  INFO 45196 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
+17:49:28:450  INFO 45196 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+17:49:28:455  INFO 45196 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+17:49:28:522  INFO 45196 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
+17:49:28:621  INFO 45196 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+17:49:28:648 ERROR 45196 --- [main] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:49:28:649  INFO 45196 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[item-service] txServiceGroup[default_tx_group]
+17:49:28:662  INFO 45196 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
+17:49:28:663  INFO 45196 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
+17:49:28:675  INFO 45196 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+17:49:28:675  INFO 45196 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[item-service] txServiceGroup[default_tx_group]
+17:49:28:675  INFO 45196 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
+17:49:28:679  INFO 45196 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:28:794  INFO 45196 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:28:812  INFO 45196 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:29:127  INFO 45196 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+17:49:29:141  INFO 45196 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:49:29:141  INFO 45196 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+17:49:29:329  INFO 45196 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+17:49:29:329  INFO 45196 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3224 ms
+17:49:29:647  INFO 45196 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+17:49:30:091  INFO 45196 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+17:49:30:203 ERROR 45196 --- [main] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:49:33:205  INFO 45196 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+17:49:33:294  INFO 45196 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+17:49:34:726  INFO 45196 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+17:49:34:954  INFO 45196 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of c1291ca5-fb95-4a41-8663-0ca8928a0619
+17:49:34:954  INFO 45196 --- [main] com.alibaba.nacos.common.remote.client   : [c1291ca5-fb95-4a41-8663-0ca8928a0619] RpcClient init label, labels = {module=naming, source=sdk}
+17:49:34:958  INFO 45196 --- [main] com.alibaba.nacos.common.remote.client   : [c1291ca5-fb95-4a41-8663-0ca8928a0619] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+17:49:34:958  INFO 45196 --- [main] com.alibaba.nacos.common.remote.client   : [c1291ca5-fb95-4a41-8663-0ca8928a0619] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+17:49:34:959  INFO 45196 --- [main] com.alibaba.nacos.common.remote.client   : [c1291ca5-fb95-4a41-8663-0ca8928a0619] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+17:49:34:959  INFO 45196 --- [main] com.alibaba.nacos.common.remote.client   : [c1291ca5-fb95-4a41-8663-0ca8928a0619] Try to connect to server on start up, server: {serverIp = '192.168.157.128', server main port = 8848}
+17:49:35:093  INFO 45196 --- [main] com.alibaba.nacos.common.remote.client   : [c1291ca5-fb95-4a41-8663-0ca8928a0619] Success to connect to server [192.168.157.128:8848] on start up, connectionId = 1710928176517_192.168.157.1_14400
+17:49:35:093  INFO 45196 --- [main] com.alibaba.nacos.common.remote.client   : [c1291ca5-fb95-4a41-8663-0ca8928a0619] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+17:49:35:093  INFO 45196 --- [main] com.alibaba.nacos.common.remote.client   : [c1291ca5-fb95-4a41-8663-0ca8928a0619] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$473/0x0000000800423c40
+17:49:35:093  INFO 45196 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c1291ca5-fb95-4a41-8663-0ca8928a0619] Notify connected event to listeners.
+17:49:35:193  INFO 45196 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+17:49:35:206  INFO 45196 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.157.1:8083 register finished
+17:49:35:654  INFO 24420 --- [nacos-grpc-client-executor-13] com.alibaba.nacos.common.remote.client   : [bb7e4852-9ec8-4772-a226-fcf6ac784ce0] Receive server push request, request = NotifySubscriberRequest, requestId = 29
+17:49:35:666  INFO 24420 --- [nacos-grpc-client-executor-13] com.alibaba.nacos.common.remote.client   : [bb7e4852-9ec8-4772-a226-fcf6ac784ce0] Ack server push request, request = NotifySubscriberRequest, requestId = 29
+17:49:35:679  INFO 45196 --- [nacos-grpc-client-executor-8] com.alibaba.nacos.common.remote.client   : [c1291ca5-fb95-4a41-8663-0ca8928a0619] Receive server push request, request = NotifySubscriberRequest, requestId = 28
+17:49:35:686  INFO 45196 --- [nacos-grpc-client-executor-8] com.alibaba.nacos.common.remote.client   : [c1291ca5-fb95-4a41-8663-0ca8928a0619] Ack server push request, request = NotifySubscriberRequest, requestId = 28
+17:49:36:476  INFO 45196 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+17:49:36:477  INFO 45196 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+17:49:36:480  INFO 45196 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+17:49:36:512  INFO 45196 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+17:49:36:676  INFO 45196 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 19.034 seconds (JVM running for 20.561)
+17:49:36:683  INFO 45196 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service.yaml, group=DEFAULT_GROUP
+17:49:36:684  INFO 45196 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service-local.yaml, group=DEFAULT_GROUP
+17:49:36:685  INFO 45196 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service, group=DEFAULT_GROUP
+17:50:14:000 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:50:14:121 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:50:24:000 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:50:24:120 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:50:28:610 ERROR 45196 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:50:28:675 ERROR 45196 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:50:34:001 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:50:34:121 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:50:38:610 ERROR 45196 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:50:38:677 ERROR 45196 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:50:44:002 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:50:44:120 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:50:48:609 ERROR 45196 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:50:48:675 ERROR 45196 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:50:54:001 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:50:54:120 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:50:58:610 ERROR 45196 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:50:58:675 ERROR 45196 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:04:001 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:04:119 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:08:611 ERROR 45196 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:08:675 ERROR 45196 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:14:001 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:14:118 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:18:610 ERROR 45196 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:18:674 ERROR 45196 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:24:000 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:24:120 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:28:611 ERROR 45196 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:28:676 ERROR 45196 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:34:001 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:34:120 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:38:611 ERROR 45196 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:38:676 ERROR 45196 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:44:001 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:44:120 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:48:609 ERROR 45196 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:48:675 ERROR 45196 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:54:002 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:54:118 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:58:611 ERROR 45196 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:51:58:675 ERROR 45196 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:04:003 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:04:120 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:08:612 ERROR 45196 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:08:676 ERROR 45196 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:14:001 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:14:119 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:18:611 ERROR 45196 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:18:676 ERROR 45196 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:24:002 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:24:121 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:28:609 ERROR 45196 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:28:675 ERROR 45196 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:34:002 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:34:120 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:38:610 ERROR 45196 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:38:674 ERROR 45196 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:44:002 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:44:120 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:48:610 ERROR 45196 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:48:676 ERROR 45196 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:54:002 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:54:118 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:58:610 ERROR 45196 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:52:58:677 ERROR 45196 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:53:04:000 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:53:04:121 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:53:08:613 ERROR 45196 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:53:08:675 ERROR 45196 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:53:14:002 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:53:14:121 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:53:18:610 ERROR 45196 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:53:18:675 ERROR 45196 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:53:24:003 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:53:24:120 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:53:28:611 ERROR 45196 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:53:28:676 ERROR 45196 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:53:34:000 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:53:34:122 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:53:38:611 ERROR 45196 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:53:38:675 ERROR 45196 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:53:44:003 ERROR 24420 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:53:44:120 ERROR 24420 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+17:53:46:773  WARN 24420 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+17:53:46:773  WARN 24420 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+17:53:46:774  WARN 24420 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+17:53:46:775  WARN 24420 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+17:53:46:810  WARN 45196 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+17:53:46:811  WARN 45196 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+17:53:46:811  WARN 45196 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+17:53:46:812  WARN 45196 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+17:53:47:081  INFO 24420 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+17:53:47:093  INFO 24420 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+17:53:47:148  INFO 45196 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+17:53:47:157  INFO 45196 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+17:53:47:404  INFO 24420 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+17:53:47:404  INFO 24420 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@3c3e3031[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+17:53:47:404  INFO 24420 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1710928164154_192.168.157.1_14113
+17:53:47:409  INFO 24420 --- [nacos-grpc-client-executor-72] c.a.n.c.remote.client.grpc.GrpcClient    : [1710928164154_192.168.157.1_14113]Ignore complete event,isRunning:false,isAbandon=false
+17:53:47:412  INFO 24420 --- [SpringContextShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@6e1aea4c[Running, pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 73]
+17:53:47:418  INFO 24420 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+17:53:47:453  INFO 24420 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+17:53:47:469  INFO 45196 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+17:53:47:470  INFO 45196 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@a083eb[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+17:53:47:470  INFO 45196 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1710928176517_192.168.157.1_14400
+17:53:47:474  INFO 45196 --- [nacos-grpc-client-executor-70] c.a.n.c.remote.client.grpc.GrpcClient    : [1710928176517_192.168.157.1_14400]Ignore complete event,isRunning:false,isAbandon=false
+17:53:47:480  INFO 45196 --- [SpringContextShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@4776065f[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 71]
+17:53:47:485  INFO 45196 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+17:53:47:518  INFO 45196 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+17:54:15:095  INFO 53504 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+17:54:17:902  INFO 53504 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=db486471-7768-3d14-97b0-02e93d25a996
+17:54:18:067  INFO 53504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:18:068  INFO 53504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:18:070  INFO 53504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:18:175  INFO 53504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:18:184  INFO 53504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:18:188  INFO 53504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:18:190  INFO 53504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$563/0x0000000800639440] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:18:193  INFO 53504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:18:206  INFO 53504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:18:218  INFO 53504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:18:227  INFO 53504 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
+17:54:18:389  INFO 53504 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+17:54:18:400  INFO 53504 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+17:54:18:591  INFO 53504 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
+17:54:18:802  INFO 53504 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+17:54:18:873  INFO 53504 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 9ebdabe4-67d4-4d6e-8c97-84d3b378af43
+17:54:18:874  INFO 53504 --- [main] com.alibaba.nacos.common.remote.client   : [9ebdabe4-67d4-4d6e-8c97-84d3b378af43] RpcClient init label, labels = {module=naming, source=sdk}
+17:54:18:878  INFO 53504 --- [main] com.alibaba.nacos.common.remote.client   : [9ebdabe4-67d4-4d6e-8c97-84d3b378af43] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+17:54:18:878  INFO 53504 --- [main] com.alibaba.nacos.common.remote.client   : [9ebdabe4-67d4-4d6e-8c97-84d3b378af43] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+17:54:18:879  INFO 53504 --- [main] com.alibaba.nacos.common.remote.client   : [9ebdabe4-67d4-4d6e-8c97-84d3b378af43] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+17:54:18:881  INFO 53504 --- [main] com.alibaba.nacos.common.remote.client   : [9ebdabe4-67d4-4d6e-8c97-84d3b378af43] Try to connect to server on start up, server: {serverIp = '192.168.157.128', server main port = 8848}
+17:54:19:033  INFO 53504 --- [main] com.alibaba.nacos.common.remote.client   : [9ebdabe4-67d4-4d6e-8c97-84d3b378af43] Success to connect to server [192.168.157.128:8848] on start up, connectionId = 1710928460456_192.168.157.1_1418
+17:54:19:033  INFO 53504 --- [main] com.alibaba.nacos.common.remote.client   : [9ebdabe4-67d4-4d6e-8c97-84d3b378af43] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+17:54:19:034  INFO 53504 --- [main] com.alibaba.nacos.common.remote.client   : [9ebdabe4-67d4-4d6e-8c97-84d3b378af43] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$473/0x000000080051fc40
+17:54:19:033  INFO 53504 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [9ebdabe4-67d4-4d6e-8c97-84d3b378af43] Notify connected event to listeners.
+17:54:19:143  INFO 53504 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 192.168.157.128:8099
+17:54:19:454  INFO 53504 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:192.168.157.128:8099,msg:< RegisterTMRequest{applicationId='item-service', transactionServiceGroup='hmall'} >
+17:54:19:603  INFO 53504 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [9ebdabe4-67d4-4d6e-8c97-84d3b378af43] Receive server push request, request = NotifySubscriberRequest, requestId = 38
+17:54:19:615  INFO 53504 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [9ebdabe4-67d4-4d6e-8c97-84d3b378af43] Ack server push request, request = NotifySubscriberRequest, requestId = 38
+17:54:19:953  INFO 53504 --- [main] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:1.5.2, server version:1.5.2,channel:[id: 0x61041aaa, L:/192.168.157.1:1455 - R:/192.168.157.128:8099]
+17:54:19:962  INFO 53504 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 133 ms, version:1.5.2,role:TMROLE,channel:[id: 0x61041aaa, L:/192.168.157.1:1455 - R:/192.168.157.128:8099]
+17:54:19:964  INFO 53504 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[item-service] txServiceGroup[hmall]
+17:54:19:989  INFO 53504 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
+17:54:19:990  INFO 53504 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
+17:54:20:015  INFO 53504 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+17:54:20:016  INFO 53504 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[item-service] txServiceGroup[hmall]
+17:54:20:016  INFO 53504 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
+17:54:20:021  INFO 53504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:20:069  INFO 27732 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+17:54:20:189  INFO 53504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:20:194  INFO 53504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:20:739  INFO 53504 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+17:54:20:759  INFO 53504 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:54:20:760  INFO 53504 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+17:54:20:993  INFO 53504 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+17:54:20:993  INFO 53504 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5867 ms
+17:54:21:319  INFO 53504 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+17:54:21:692  INFO 53504 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+17:54:21:794  INFO 53504 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 192.168.157.128:8099
+17:54:21:795  INFO 53504 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : RM will register :jdbc:mysql://192.168.157.128:3306/hm-item
+17:54:21:796  INFO 53504 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:RMROLE,address:192.168.157.128:8099,msg:< RegisterRMRequest{resourceIds='jdbc:mysql://192.168.157.128:3306/hm-item', applicationId='item-service', transactionServiceGroup='hmall'} >
+17:54:21:849  INFO 53504 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : register RM success. client version:1.5.2, server version:1.5.2,channel:[id: 0x11ab739d, L:/192.168.157.1:1466 - R:/192.168.157.128:8099]
+17:54:21:853  INFO 53504 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 49 ms, version:1.5.2,role:RMROLE,channel:[id: 0x11ab739d, L:/192.168.157.1:1466 - R:/192.168.157.128:8099]
+17:54:22:131  INFO 27732 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=db486471-7768-3d14-97b0-02e93d25a996
+17:54:22:265  INFO 27732 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:22:265  INFO 27732 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:22:266  INFO 27732 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:22:337  INFO 27732 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:22:345  INFO 27732 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:22:347  INFO 27732 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:22:348  INFO 27732 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$563/0x0000000800638840] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:22:351  INFO 27732 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:22:358  INFO 27732 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:22:362  INFO 27732 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:22:366  INFO 27732 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
+17:54:22:458  INFO 27732 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+17:54:22:465  INFO 27732 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+17:54:22:561  INFO 27732 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
+17:54:22:665  INFO 27732 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+17:54:22:702  INFO 27732 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of d1461020-8043-4960-9aa5-148340efd317
+17:54:22:703  INFO 27732 --- [main] com.alibaba.nacos.common.remote.client   : [d1461020-8043-4960-9aa5-148340efd317] RpcClient init label, labels = {module=naming, source=sdk}
+17:54:22:705  INFO 27732 --- [main] com.alibaba.nacos.common.remote.client   : [d1461020-8043-4960-9aa5-148340efd317] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+17:54:22:705  INFO 27732 --- [main] com.alibaba.nacos.common.remote.client   : [d1461020-8043-4960-9aa5-148340efd317] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+17:54:22:705  INFO 27732 --- [main] com.alibaba.nacos.common.remote.client   : [d1461020-8043-4960-9aa5-148340efd317] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+17:54:22:706  INFO 27732 --- [main] com.alibaba.nacos.common.remote.client   : [d1461020-8043-4960-9aa5-148340efd317] Try to connect to server on start up, server: {serverIp = '192.168.157.128', server main port = 8848}
+17:54:22:837  INFO 27732 --- [main] com.alibaba.nacos.common.remote.client   : [d1461020-8043-4960-9aa5-148340efd317] Success to connect to server [192.168.157.128:8848] on start up, connectionId = 1710928464269_192.168.157.1_1478
+17:54:22:837  INFO 27732 --- [main] com.alibaba.nacos.common.remote.client   : [d1461020-8043-4960-9aa5-148340efd317] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+17:54:22:838  INFO 27732 --- [main] com.alibaba.nacos.common.remote.client   : [d1461020-8043-4960-9aa5-148340efd317] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$473/0x0000000800423040
+17:54:22:837  INFO 27732 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [d1461020-8043-4960-9aa5-148340efd317] Notify connected event to listeners.
+17:54:22:921  INFO 27732 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 192.168.157.128:8099
+17:54:23:171  INFO 27732 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:192.168.157.128:8099,msg:< RegisterTMRequest{applicationId='item-service', transactionServiceGroup='hmall'} >
+17:54:23:384  INFO 27732 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [d1461020-8043-4960-9aa5-148340efd317] Receive server push request, request = NotifySubscriberRequest, requestId = 41
+17:54:23:395  INFO 27732 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [d1461020-8043-4960-9aa5-148340efd317] Ack server push request, request = NotifySubscriberRequest, requestId = 41
+17:54:23:583  INFO 27732 --- [main] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:1.5.2, server version:1.5.2,channel:[id: 0xa6c2b7f9, L:/192.168.157.1:1483 - R:/192.168.157.128:8099]
+17:54:23:590  INFO 27732 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 87 ms, version:1.5.2,role:TMROLE,channel:[id: 0xa6c2b7f9, L:/192.168.157.1:1483 - R:/192.168.157.128:8099]
+17:54:23:592  INFO 27732 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[item-service] txServiceGroup[hmall]
+17:54:23:610  INFO 27732 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
+17:54:23:611  INFO 27732 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
+17:54:23:629  INFO 27732 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+17:54:23:629  INFO 27732 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[item-service] txServiceGroup[hmall]
+17:54:23:629  INFO 27732 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
+17:54:23:634  INFO 27732 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:23:764  INFO 27732 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:23:769  INFO 27732 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:54:24:077  INFO 27732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+17:54:24:089  INFO 27732 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:54:24:089  INFO 27732 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+17:54:24:273  INFO 27732 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+17:54:24:273  INFO 27732 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4175 ms
+17:54:24:559  INFO 27732 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+17:54:24:915  INFO 27732 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+17:54:24:990  INFO 27732 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 192.168.157.128:8099
+17:54:24:991  INFO 27732 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : RM will register :jdbc:mysql://192.168.157.128:3306/hm-item
+17:54:24:992  INFO 27732 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:RMROLE,address:192.168.157.128:8099,msg:< RegisterRMRequest{resourceIds='jdbc:mysql://192.168.157.128:3306/hm-item', applicationId='item-service', transactionServiceGroup='hmall'} >
+17:54:25:026  INFO 27732 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : register RM success. client version:1.5.2, server version:1.5.2,channel:[id: 0x5ee2fee5, L:/192.168.157.1:1487 - R:/192.168.157.128:8099]
+17:54:25:026  INFO 27732 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 29 ms, version:1.5.2,role:RMROLE,channel:[id: 0x5ee2fee5, L:/192.168.157.1:1487 - R:/192.168.157.128:8099]
+17:54:25:068  INFO 53504 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+17:54:25:154  INFO 53504 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+17:54:26:552  INFO 53504 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+17:54:26:782  INFO 53504 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 59acc55c-ffe4-4242-a882-cd10a77590bb
+17:54:26:783  INFO 53504 --- [main] com.alibaba.nacos.common.remote.client   : [59acc55c-ffe4-4242-a882-cd10a77590bb] RpcClient init label, labels = {module=naming, source=sdk}
+17:54:26:783  INFO 53504 --- [main] com.alibaba.nacos.common.remote.client   : [59acc55c-ffe4-4242-a882-cd10a77590bb] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+17:54:26:784  INFO 53504 --- [main] com.alibaba.nacos.common.remote.client   : [59acc55c-ffe4-4242-a882-cd10a77590bb] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+17:54:26:784  INFO 53504 --- [main] com.alibaba.nacos.common.remote.client   : [59acc55c-ffe4-4242-a882-cd10a77590bb] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+17:54:26:785  INFO 53504 --- [main] com.alibaba.nacos.common.remote.client   : [59acc55c-ffe4-4242-a882-cd10a77590bb] Try to connect to server on start up, server: {serverIp = '192.168.157.128', server main port = 8848}
+17:54:26:919  INFO 53504 --- [main] com.alibaba.nacos.common.remote.client   : [59acc55c-ffe4-4242-a882-cd10a77590bb] Success to connect to server [192.168.157.128:8848] on start up, connectionId = 1710928468349_192.168.157.1_1499
+17:54:26:919  INFO 53504 --- [main] com.alibaba.nacos.common.remote.client   : [59acc55c-ffe4-4242-a882-cd10a77590bb] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+17:54:26:919  INFO 53504 --- [main] com.alibaba.nacos.common.remote.client   : [59acc55c-ffe4-4242-a882-cd10a77590bb] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$473/0x000000080051fc40
+17:54:26:919  INFO 53504 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [59acc55c-ffe4-4242-a882-cd10a77590bb] Notify connected event to listeners.
+17:54:26:946  INFO 53504 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+17:54:26:957  INFO 53504 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.157.1:8081 register finished
+17:54:27:452  INFO 53504 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [59acc55c-ffe4-4242-a882-cd10a77590bb] Receive server push request, request = NotifySubscriberRequest, requestId = 42
+17:54:27:460  INFO 53504 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [59acc55c-ffe4-4242-a882-cd10a77590bb] Ack server push request, request = NotifySubscriberRequest, requestId = 42
+17:54:27:810  INFO 27732 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+17:54:27:877  INFO 27732 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+17:54:28:195  INFO 53504 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+17:54:28:196  INFO 53504 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+17:54:28:200  INFO 53504 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+17:54:28:244  INFO 53504 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+17:54:28:448  INFO 53504 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 22.068 seconds (JVM running for 23.899)
+17:54:28:460  INFO 53504 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service.yaml, group=DEFAULT_GROUP
+17:54:28:462  INFO 53504 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service-local.yaml, group=DEFAULT_GROUP
+17:54:28:463  INFO 53504 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service, group=DEFAULT_GROUP
+17:54:29:239  INFO 27732 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+17:54:29:429  INFO 27732 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of f8afcf03-6709-4797-92a5-08374684f86d
+17:54:29:430  INFO 27732 --- [main] com.alibaba.nacos.common.remote.client   : [f8afcf03-6709-4797-92a5-08374684f86d] RpcClient init label, labels = {module=naming, source=sdk}
+17:54:29:430  INFO 27732 --- [main] com.alibaba.nacos.common.remote.client   : [f8afcf03-6709-4797-92a5-08374684f86d] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+17:54:29:431  INFO 27732 --- [main] com.alibaba.nacos.common.remote.client   : [f8afcf03-6709-4797-92a5-08374684f86d] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+17:54:29:431  INFO 27732 --- [main] com.alibaba.nacos.common.remote.client   : [f8afcf03-6709-4797-92a5-08374684f86d] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+17:54:29:431  INFO 27732 --- [main] com.alibaba.nacos.common.remote.client   : [f8afcf03-6709-4797-92a5-08374684f86d] Try to connect to server on start up, server: {serverIp = '192.168.157.128', server main port = 8848}
+17:54:29:568  INFO 27732 --- [main] com.alibaba.nacos.common.remote.client   : [f8afcf03-6709-4797-92a5-08374684f86d] Success to connect to server [192.168.157.128:8848] on start up, connectionId = 1710928470994_192.168.157.1_1568
+17:54:29:568  INFO 27732 --- [main] com.alibaba.nacos.common.remote.client   : [f8afcf03-6709-4797-92a5-08374684f86d] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+17:54:29:568  INFO 27732 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [f8afcf03-6709-4797-92a5-08374684f86d] Notify connected event to listeners.
+17:54:29:568  INFO 27732 --- [main] com.alibaba.nacos.common.remote.client   : [f8afcf03-6709-4797-92a5-08374684f86d] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$473/0x0000000800423040
+17:54:29:627  INFO 27732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+17:54:29:642  INFO 27732 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.157.1:8083 register finished
+17:54:30:103  INFO 27732 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [f8afcf03-6709-4797-92a5-08374684f86d] Receive server push request, request = NotifySubscriberRequest, requestId = 43
+17:54:30:106  INFO 53504 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [59acc55c-ffe4-4242-a882-cd10a77590bb] Receive server push request, request = NotifySubscriberRequest, requestId = 44
+17:54:30:117  INFO 27732 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [f8afcf03-6709-4797-92a5-08374684f86d] Ack server push request, request = NotifySubscriberRequest, requestId = 43
+17:54:30:117  INFO 53504 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [59acc55c-ffe4-4242-a882-cd10a77590bb] Ack server push request, request = NotifySubscriberRequest, requestId = 44
+17:54:30:920  INFO 27732 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+17:54:30:921  INFO 27732 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+17:54:30:925  INFO 27732 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+17:54:30:971  INFO 27732 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+17:54:31:144  INFO 27732 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 19.552 seconds (JVM running for 21.423)
+17:54:31:151  INFO 27732 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service.yaml, group=DEFAULT_GROUP
+17:54:31:152  INFO 27732 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service-local.yaml, group=DEFAULT_GROUP
+17:54:31:153  INFO 27732 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service, group=DEFAULT_GROUP
+17:56:50:664  INFO 27732 --- [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:56:50:664  INFO 27732 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+17:56:50:666  INFO 27732 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+17:56:50:791 DEBUG 27732 --- [http-nio-8083-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? )
+17:56:50:823 DEBUG 27732 --- [http-nio-8083-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 1861102(Long), 100000006163(Long), 14741770661(Long)
+17:56:50:986 DEBUG 27732 --- [http-nio-8083-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 3
+17:56:53:692 DEBUG 27732 --- [http-nio-8083-exec-2] c.h.i.m.ItemMapper.selectPage_mpCount    : ==>  Preparing: SELECT COUNT(*) FROM item WHERE (status = ?)
+17:56:53:693 DEBUG 27732 --- [http-nio-8083-exec-2] c.h.i.m.ItemMapper.selectPage_mpCount    : ==> Parameters: 1(Integer)
+17:56:54:312 DEBUG 27732 --- [http-nio-8083-exec-2] c.h.i.m.ItemMapper.selectPage_mpCount    : <==      Total: 1
+17:56:54:323 DEBUG 27732 --- [http-nio-8083-exec-2] c.h.item.mapper.ItemMapper.selectPage    : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+17:56:54:324 DEBUG 27732 --- [http-nio-8083-exec-2] c.h.item.mapper.ItemMapper.selectPage    : ==> Parameters: 1(Integer), 20(Long)
+17:56:54:467 DEBUG 27732 --- [http-nio-8083-exec-2] c.h.item.mapper.ItemMapper.selectPage    : <==      Total: 20
+17:56:56:472  INFO 53504 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:56:56:473  INFO 53504 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+17:56:56:482  INFO 53504 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+17:56:56:587 DEBUG 53504 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? )
+17:56:56:612 DEBUG 53504 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 1861102(Long), 100000006163(Long), 14741770661(Long)
+17:56:56:665 DEBUG 53504 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 3
+17:56:59:358 DEBUG 27732 --- [http-nio-8083-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? )
+17:56:59:359 DEBUG 27732 --- [http-nio-8083-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 1861102(Long), 100000006163(Long), 14741770661(Long)
+17:56:59:363 DEBUG 27732 --- [http-nio-8083-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 3
+17:57:03:566 DEBUG 53504 --- [http-nio-8081-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? )
+17:57:03:566 DEBUG 53504 --- [http-nio-8081-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 1861102(Long), 100000006163(Long), 14741770661(Long)
+17:57:03:570 DEBUG 53504 --- [http-nio-8081-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 3
+17:57:03:691 DEBUG 27732 --- [http-nio-8083-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? )
+17:57:03:692 DEBUG 27732 --- [http-nio-8083-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 1861102(Long), 100000006163(Long), 14741770661(Long)
+17:57:03:696 DEBUG 27732 --- [http-nio-8083-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 3
+17:57:04:185 DEBUG 53504 --- [http-nio-8081-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? )
+17:57:04:185 DEBUG 53504 --- [http-nio-8081-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 1861102(Long), 100000006163(Long), 14741770661(Long)
+17:57:04:188 DEBUG 53504 --- [http-nio-8081-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 3
+17:58:42:060 DEBUG 27732 --- [http-nio-8083-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? )
+17:58:42:061 DEBUG 27732 --- [http-nio-8083-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 1861102(Long), 100000006163(Long), 14741770661(Long)
+17:58:42:064 DEBUG 27732 --- [http-nio-8083-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 3
+17:59:28:775 DEBUG 53504 --- [http-nio-8081-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? )
+17:59:28:776 DEBUG 53504 --- [http-nio-8081-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 1861102(Long), 100000006163(Long), 14741770661(Long)
+17:59:28:779 DEBUG 53504 --- [http-nio-8081-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 3
+18:00:14:536 DEBUG 27732 --- [http-nio-8083-exec-9] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? )
+18:00:14:537 DEBUG 27732 --- [http-nio-8083-exec-9] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 1861102(Long), 100000006163(Long), 14741770661(Long)
+18:00:14:541 DEBUG 27732 --- [http-nio-8083-exec-9] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 3
+18:02:10:390 DEBUG 53504 --- [http-nio-8081-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? )
+18:02:10:391 DEBUG 53504 --- [http-nio-8081-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 1861102(Long), 100000006163(Long), 14741770661(Long)
+18:02:10:396 DEBUG 53504 --- [http-nio-8081-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 3
+18:02:15:376 DEBUG 53504 --- [http-nio-8081-exec-8] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? )
+18:02:15:378 DEBUG 53504 --- [http-nio-8081-exec-8] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 1861102(Long), 14741770661(Long)
+18:02:15:386 DEBUG 53504 --- [http-nio-8081-exec-8] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 2
+18:02:15:813  WARN 27732 --- [http-nio-8083-exec-1] c.h.item.service.impl.ItemServiceImpl    : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1087009d] Transaction not enabled
+18:02:15:816 DEBUG 27732 --- [http-nio-8083-exec-1] c.h.item.mapper.ItemMapper.updateStock   : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
+18:02:15:817 DEBUG 27732 --- [http-nio-8083-exec-1] c.h.item.mapper.ItemMapper.updateStock   : ==> Parameters: 1(Integer), 1861102(Long)
+18:02:15:818 DEBUG 27732 --- [http-nio-8083-exec-1] c.h.item.mapper.ItemMapper.updateStock   : ==> Parameters: 2(Integer), 14741770661(Long)
+18:04:53:275 DEBUG 27732 --- [http-nio-8083-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+18:04:53:276 DEBUG 27732 --- [http-nio-8083-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+18:04:53:277 DEBUG 27732 --- [http-nio-8083-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:04:56:727 DEBUG 53504 --- [http-nio-8081-exec-1] c.h.i.m.ItemMapper.selectPage_mpCount    : ==>  Preparing: SELECT COUNT(*) FROM item WHERE (status = ?)
+18:04:56:728 DEBUG 53504 --- [http-nio-8081-exec-1] c.h.i.m.ItemMapper.selectPage_mpCount    : ==> Parameters: 1(Integer)
+18:04:56:748 DEBUG 53504 --- [http-nio-8081-exec-1] c.h.i.m.ItemMapper.selectPage_mpCount    : <==      Total: 1
+18:04:56:757 DEBUG 53504 --- [http-nio-8081-exec-1] c.h.item.mapper.ItemMapper.selectPage    : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+18:04:56:758 DEBUG 53504 --- [http-nio-8081-exec-1] c.h.item.mapper.ItemMapper.selectPage    : ==> Parameters: 1(Integer), 20(Long)
+18:04:56:763 DEBUG 53504 --- [http-nio-8081-exec-1] c.h.item.mapper.ItemMapper.selectPage    : <==      Total: 20
+18:05:01:074 DEBUG 53504 --- [http-nio-8081-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? )
+18:05:01:075 DEBUG 53504 --- [http-nio-8081-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long), 14741770661(Long)
+18:05:01:102 DEBUG 53504 --- [http-nio-8081-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 2
+18:05:16:518 DEBUG 27732 --- [http-nio-8083-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? )
+18:05:16:519 DEBUG 27732 --- [http-nio-8083-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long), 14741770661(Long)
+18:05:16:521 DEBUG 27732 --- [http-nio-8083-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 2
+18:05:17:534 DEBUG 53504 --- [http-nio-8081-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? )
+18:05:17:534 DEBUG 53504 --- [http-nio-8081-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long), 14741770661(Long)
+18:05:17:537 DEBUG 53504 --- [http-nio-8081-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 2
+18:05:30:971 DEBUG 27732 --- [http-nio-8083-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? )
+18:05:30:972 DEBUG 27732 --- [http-nio-8083-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long), 14741770661(Long)
+18:05:30:974 DEBUG 27732 --- [http-nio-8083-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 2
+18:05:38:856 DEBUG 53504 --- [http-nio-8081-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+18:05:38:856 DEBUG 53504 --- [http-nio-8081-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 14741770661(Long)
+18:05:38:858 DEBUG 53504 --- [http-nio-8081-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:05:38:890  WARN 27732 --- [http-nio-8083-exec-6] c.h.item.service.impl.ItemServiceImpl    : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@248b5b93] Transaction not enabled
+18:05:38:892 DEBUG 27732 --- [http-nio-8083-exec-6] c.h.item.mapper.ItemMapper.updateStock   : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
+18:05:38:892 DEBUG 27732 --- [http-nio-8083-exec-6] c.h.item.mapper.ItemMapper.updateStock   : ==> Parameters: 2(Integer), 14741770661(Long)
+18:07:48:063  INFO 53504 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [9ebdabe4-67d4-4d6e-8c97-84d3b378af43] Server healthy check fail, currentConnection = 1710928460456_192.168.157.1_1418
+18:07:48:065  INFO 53504 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [9ebdabe4-67d4-4d6e-8c97-84d3b378af43] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+18:07:48:449  INFO 53504 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [9ebdabe4-67d4-4d6e-8c97-84d3b378af43] Success to connect a server [192.168.157.128:8848], connectionId = 1710929269907_192.168.157.1_3755
+18:07:48:449  INFO 53504 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [9ebdabe4-67d4-4d6e-8c97-84d3b378af43] Abandon prev connection, server is 192.168.157.128:8848, connectionId is 1710928460456_192.168.157.1_1418
+18:07:48:449  INFO 53504 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : Close current connection 1710928460456_192.168.157.1_1418
+18:07:48:451  INFO 53504 --- [nacos-grpc-client-executor-187] c.a.n.c.remote.client.grpc.GrpcClient    : [1710928460456_192.168.157.1_1418]Ignore complete event,isRunning:false,isAbandon=true
+18:07:48:460  INFO 53504 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [9ebdabe4-67d4-4d6e-8c97-84d3b378af43] Notify disconnected event to listeners
+18:07:48:461  INFO 53504 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [9ebdabe4-67d4-4d6e-8c97-84d3b378af43] Notify connected event to listeners.
+18:07:49:917  INFO 53504 --- [nacos-grpc-client-executor-189] com.alibaba.nacos.common.remote.client   : [9ebdabe4-67d4-4d6e-8c97-84d3b378af43] Receive server push request, request = NotifySubscriberRequest, requestId = 54
+18:07:49:917  INFO 53504 --- [nacos-grpc-client-executor-189] com.alibaba.nacos.common.remote.client   : [9ebdabe4-67d4-4d6e-8c97-84d3b378af43] Ack server push request, request = NotifySubscriberRequest, requestId = 54
