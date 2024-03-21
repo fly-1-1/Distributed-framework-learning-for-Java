@@ -35,4 +35,14 @@ public class MqListener {
     public void listenFanoutQueue2(String msg) throws InterruptedException {
         System.err.println("消费者2 fanout.queue2收到消息: " + msg);
     }
+
+    @RabbitListener(queues = "direct.queue1")
+    public void listenDirectQueue1(String msg) throws InterruptedException {
+        System.out.println("消费者1 direct.queue1收到消息: " + msg);
+    }
+
+    @RabbitListener(queues = "direct.queue2")
+    public void listenDirectQueue2(String msg) throws InterruptedException {
+        System.err.println("消费者2 direct.queue2收到消息: " + msg);
+    }
 }

@@ -34,4 +34,11 @@ public class SpringAmqpTest {
         String msg = "hello fanout";
         rabbitTemplate.convertAndSend(queueName,null, msg);
     }
+
+    @Test
+    void testSendDirectMessage() {
+        String queueName = "hmall.direct";
+        String msg = "红色警报!!!";
+        rabbitTemplate.convertAndSend(queueName,"blue", msg);
+    }
 }
