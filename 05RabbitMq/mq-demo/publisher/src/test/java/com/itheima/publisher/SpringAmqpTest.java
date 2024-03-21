@@ -5,6 +5,10 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+
 @SpringBootTest
 public class SpringAmqpTest {
 
@@ -32,20 +36,29 @@ public class SpringAmqpTest {
     void testSendExchangeMessage() {
         String queueName = "hmall.fanout";
         String msg = "hello fanout";
-        rabbitTemplate.convertAndSend(queueName,null, msg);
+        rabbitTemplate.convertAndSend(queueName, null, msg);
     }
 
     @Test
     void testSendDirectMessage() {
         String queueName = "hmall.direct";
         String msg = "红色警报!!!";
-        rabbitTemplate.convertAndSend(queueName,"blue", msg);
+        rabbitTemplate.convertAndSend(queueName, "blue", msg);
     }
 
     @Test
     void testSendTopicMessage() {
         String queueName = "hmall.topic";
         String msg = "天气!!!";
-        rabbitTemplate.convertAndSend(queueName,"china.weather", msg);
+        rabbitTemplate.convertAndSend(queueName, "china.weather", msg);
     }
+
+    @Test
+    void testSendObject() {
+        Map<String, Object> msg = new HashMap<>(2);
+        msg.put("name", "jack");
+        msg.put("age", 21);
+        rabbitTemplate.convertAndSend("object.queue", msg);
+    }
+
 }

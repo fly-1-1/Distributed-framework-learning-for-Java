@@ -67,4 +67,9 @@ public class MqListener {
     public void listenTopicQueue2(String msg) throws InterruptedException {
         System.err.println("消费者2 topic.queue2收到消息: " + msg);
     }
+
+    @RabbitListener(queues = "object.queue")
+    public void listenObject(String msg) throws InterruptedException {
+        System.out.println("消费者1 object.queue1收到消息: " + msg);
+    }
 }
