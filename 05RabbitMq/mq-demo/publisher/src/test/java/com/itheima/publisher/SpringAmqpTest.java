@@ -28,4 +28,10 @@ public class SpringAmqpTest {
         }
     }
 
+    @Test
+    void testSendExchangeMessage() {
+        String queueName = "hmall.fanout";
+        String msg = "hello fanout";
+        rabbitTemplate.convertAndSend(queueName,null, msg);
+    }
 }
