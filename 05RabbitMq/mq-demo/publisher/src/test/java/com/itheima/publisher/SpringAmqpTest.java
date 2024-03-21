@@ -41,4 +41,11 @@ public class SpringAmqpTest {
         String msg = "红色警报!!!";
         rabbitTemplate.convertAndSend(queueName,"blue", msg);
     }
+
+    @Test
+    void testSendTopicMessage() {
+        String queueName = "hmall.topic";
+        String msg = "天气!!!";
+        rabbitTemplate.convertAndSend(queueName,"china.weather", msg);
+    }
 }
